@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -13,94 +13,132 @@
   <base href="https://htmlacademy-htmlcss.github.io/1651251-technomart-30/5/">
 </head>
 
-<body style="background-color: rgb(174, 255, 248);">
+<body class="page-body">
 
-  <header>
-    <section>
-      <a href="index.html"><img src="./img/symbols/logo.svg" width="220" height="68" alt="site_logotype"></a>
-      <form>
-        <label for="search-id"><img src="./img/symbols/icon-search.svg" width="11" height="11"
-            alt="search_icon" /></label>
-        <input type="text" name="search" id="search-id" placeholder="Поиск">
-      </form>
-      <a href="blank.html"><img src="./img/symbols/icon-bookmark.svg" width="14" height="16" alt="bookmark_icon">
-        Закладки: 0</a>
-      <a href="blank.html"><img src="./img/symbols/icon-mini-basket.svg" width="15" height="15" alt="basket_icon">
-        Корзина: 0</a>
-      <a href="blank.html">Оформить заказ</a>
-    </section>
-    <section>
-      <h1>
-        Интернет-магазин
-        строительных материалов
-        и инструментов для ремонта
-      </h1>
-      <div>
-        <a href="tel:+78125550555"><img src="./img/symbols/icon-phone.svg" width="19" height="19" alt="phone_icon"> +7
-          (812) 555-05-55</a>
-        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+  <header class="main-header">
+    <section class="header-top">
+      <div class="header-top-inner container">
+        <div class="header-top-left">
+          <div class="logo">
+            <a href="index.html" class="logo-link"><img class="logo-img" src="./img/symbols/logo.svg" width="107" height="17"
+                alt="site_logotype"></a>
+          </div>
+          <form class="search">
+            <label class="header-link" for="search-id"><img src="./img/symbols/icon-search.svg" width="17" height="17"
+                alt="search_icon" /></label>
+            <input type="text" name="search" id="search-id" placeholder="Поиск">
+          </form>
+        </div>
+        <div class="header-top-right">
+          <a class="header-link" href="blank.html"><img src="./img/symbols/icon-bookmark.svg" width="14" height="16"
+              alt="bookmark_icon">
+            Закладки: 0</a>
+          <a class="header-link" href="blank.html"><img src="./img/symbols/icon-mini-basket.svg" width="15" height="15"
+              alt="basket_icon">
+            Корзина: 0</a>
+          <a class="header-link" href="blank.html">Оформить заказ</a>
+        </div>
       </div>
-      <ul>
-        <li><a href="blank.html"><img src="./img/symbols/icon-login.svg" width="21" height="17" alt="login_icon">
-            Войти</a></li>
-        <li><a href="blank.html">Регистрация</a></li>
-      </ul>
     </section>
-    <nav>
-      <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="blank.html">Компания</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="blank.html">Новости</a></li>
-        <li><a href="blank.html">Спецпредложения</a></li>
-        <li><a href="blank.html">Доставка</a></li>
-        <li><a href="blank.html">Контакты</a></li>
-      </ul>
-    </nav>
+    <section class="header-middle">
+      <div class="header-middle-inner container">
+        <h1 class="main-title">
+          Интернет-магазин<br>
+          строительных материалов<br>
+          и инструментов для ремонта
+        </h1>
+        <div class="header-phone-wrapper">
+          <div class="header-phone-number-container">
+            <a class="header-phone-number" href="tel:+78125550555"><img src="./img/symbols/icon-phone.svg" width="19"
+                height="19" alt="phone_icon"> +7
+              (812) 555-05-55</a>
+          </div>
+          <p class="header-phone-text">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </div>
+        <ul class="user-link-list">
+          <li class="user-link-container"><a class="user-link" href="blank.html"><img src="./img/symbols/icon-login.svg"
+                width="21" height="17" alt="login_icon">
+              Войти</a></li>
+          <li class="user-link-container"><a class="user-link" href="blank.html">Регистрация</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="header-bottom">
+      <div class="header-bottom-inner container">
+        <nav class="main-menu">
+          <ul class="main-menu-wrap">
+            <li class="main-menu-item"><a href="index.html">Главная</a></li>
+            <li class="main-menu-item"><a href="blank.html">Компания</a></li>
+            <li class="main-menu-item"><a href="catalog.html">Каталог</a></li>
+            <li class="main-menu-item"><a href="blank.html">Новости</a></li>
+            <li class="main-menu-item"><a href="blank.html">Спецпредложения</a></li>
+            <li class="main-menu-item"><a href="blank.html">Доставка</a></li>
+            <li class="main-menu-item"><a href="blank.html">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
   </header>
 
-  <main>
+  <main class="page-blank">
+    <section class="empty container">
     Здесь пока что ничего нет! <br>
     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus nesciunt facilis, rem nobis saepe repellat
-    <br>
     perspiciatis ex vero voluptates ut quam hic unde explicabo ipsum officiis, deserunt quod cumque ea aspernatur.
-    <br>
     Eaque sit maiores voluptatibus voluptas ex ad quod magnam.
+  </section>
   </main>
 
-  <footer>
-    <section>
-      <h2>Меню футера</h2>
-      <a href="index.html"><img src="./img/symbols/logo.svg" width="220" height="68" alt="site_logotype"></a>
-      <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-      <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-      <ul>
-        <li><a href="blank.html">Компания</a></li>
-        <li><a href="blank.html">Новости</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="blank.html">Доставка</a></li>
-        <li><a href="blank.html">Контакты</a></li>
-      </ul>
-      <ul>
-        <li><a href="blank.html">Материалы</a></li>
-        <li><a href="blank.html">Техника</a></li>
-        <li><a href="blank.html">Инструмент</a></li>
-        <li><a href="blank.html">Спецпредложения</a></li>
-      </ul>
+  <footer class="main-footer">
+    <section class="footer-top">
+      <div class="footer-top-inner container">
+        <div class="footer-top-left">
+          <h2 class="footer-top-heading">Меню футера</h2>
+          <div class="footer-logo logo">
+            <a href="index.html" class="logo-link"><img class="logo-img" src="./img/symbols/logo.svg" width="107" height="17"
+                alt="site_logotype"></a>
+          </div>
+          <p class="footer-top-text">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+            <a class="footer-top-link" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          </p>
+        </div>
+        <div class="footer-top-right">
+          <ul class="footer-top-menu">
+            <li class="footer-top-menu-item"><a class="footer-top-link" href="blank.html">Компания</a></li>
+            <li class="footer-top-menu-item"><a class="footer-top-link" href="blank.html">Новости</a></li>
+            <li class="footer-top-menu-item"><a class="footer-top-link" href="catalog.html">Каталог</a></li>
+            <li class="footer-top-menu-item"><a class="footer-top-link" href="blank.html">Доставка</a></li>
+            <li class="footer-top-menu-item"><a class="footer-top-link" href="blank.html">Контакты</a></li>
+          </ul>
+          <ul class="footer-top-menu">
+            <li class="footer-top-menu-item"><a class="footer-top-link" href="blank.html">Материалы</a></li>
+            <li class="footer-top-menu-item"><a class="footer-top-link" href="blank.html">Техника</a></li>
+            <li class="footer-top-menu-item"><a class="footer-top-link" href="blank.html">Инструмент</a></li>
+            <li class="footer-top-menu-item"><a class="footer-top-link" href="blank.html">Спецпредложения</a></li>
+          </ul>
+        </div>
+      </div>
     </section>
-    <section>
-      <h2>Контакты</h2>
-      <span>© 2010–2019 Компания «Техномарт»</span>
-      <span>Все права защищены</span>
-      <ul>
-        <li><a href="#"><img src="./img/symbols/vk.svg" width="27" height="16" alt="vk-icon"></a></li>
-        <li><a href="#"><img src="./img/symbols/fb.svg" width="12" height="22" alt="facebook-icon"></a></li>
-        <li><a href="#"><img src="./img/symbols/inst.svg" width="21" height="21" alt="instagram-icon"></a></li>
-      </ul>
-      <ul>
-        <li>Обратная связь: <a href="mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
-        <li>Разработано — <a href="htmlacademy.ru">htmlacademy.ru</a></li>
-      </ul>
+    <section class="footer-bottom">
+      <div class="footer-bottom-inner container">
+        <h2 class="footer-bottom-heading">Контакты</h2>
+        <p class="footer-bottom-text">
+          <span>© 2010–2019 Компания «Техномарт»</span>
+          <span>Все права защищены</span>
+        </p>
+        <ul class="socials">
+          <li class="socials-item"><a class="socials-link" href="#"><img class="socials-img" src="./img/symbols/vk.svg"
+                width="27" height="16" alt="vk-icon"></a></li>
+          <li class="socials-item"><a class="socials-link" href="#"><img class="socials-img" src="./img/symbols/fb.svg"
+                width="12" height="22" alt="facebook-icon"></a></li>
+          <li class="socials-item"><a class="socials-link" href="#"><img class="socials-img"
+                src="./img/symbols/inst.svg" width="21" height="21" alt="instagram-icon"></a></li>
+        </ul>
+        <ul class="feedback">
+          <li class="feedback-item">Обратная связь: <a href="mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+          <li class="feedback-item">Разработано — <a href="htmlacademy.ru">htmlacademy.ru</a></li>
+        </ul>
+      </div>
     </section>
   </footer>
 
