@@ -93,6 +93,11 @@
   margin: 0 auto;
 }
 
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -100,6 +105,16 @@ a {
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+h2,
+h3 {
+  margin: 0;
 }
 
 img {
@@ -108,10 +123,6 @@ img {
 }
 
 /*******************************************Header*******************************************/
-
-.main-title {
-  margin: 0;
-}
 
 .header-top {
   width: 100%;
@@ -138,7 +149,6 @@ img {
   background-color: var(--basic-red);
   box-shadow: 0px 5px 0px 0px rgb(181, 41, 51);
   display: flex;
-
 }
 
 .logo-link {
@@ -189,6 +199,7 @@ img {
 }
 
 .main-title {
+  margin: 0;
   color: var(--basic-red);
   font-family: "CuprumItalic";
   font-size: 16px;
@@ -229,6 +240,7 @@ img {
 
 .header-phone-number-container {
   border: 3px solid var(--white);
+  margin-bottom: 3px;
   padding: 7px 45px 8px 55px;
 }
 
@@ -245,10 +257,20 @@ img {
   color: var(--basic-gray);
 }
 
+.authorized span {
+  margin: 0 21px;
+}
+
+.unauthorized img {
+  margin-right: 6px;
+}
+
 .user-link {
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
+  display: flex;
+  align-items: center;
 }
 
 .user-link:focus,
@@ -268,8 +290,11 @@ img {
 }
 
 .user-link-container {
+  padding: 0 24px;
+  height: 45px;
   background-color: var(--white);
-  padding: 12px 25px;
+  display: flex;
+  align-items: center;
 }
 
 .user-link-container + .user-link-container {
@@ -485,6 +510,7 @@ img {
 
 .popular-goods-heading-container,
 .manufacturers-heading-container {
+  padding: 25px 19px 26px 28px;
   background-color: #f9f5f0;
   display: flex;
   flex-direction: row;
@@ -492,14 +518,8 @@ img {
   align-items: center;
 }
 
-.popular-goods-heading-container .standart-link,
-.manufacturers-heading-container .standart-link {
-  margin-right: 14px;
-}
-
 .popular-goods-heading,
 .manufacturers-heading {
-  padding-left: 28px;
   font-family: "Cuprum";
   font-weight: 400;
   color: #32425c;
@@ -530,6 +550,7 @@ img {
 }
 
 .goods-wrap {
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -544,10 +565,12 @@ img {
 }
 
 .goods-item-link {
+  padding-bottom: 21px;
   overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .goods-item-top {
@@ -558,10 +581,11 @@ img {
 }
 
 .goods-item-bottom {
-  height: 45%;
+  height: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 .goods-item-heading {
@@ -577,7 +601,7 @@ img {
 }
 
 .old-cost {
-  padding-top: 7px;
+  padding-top: 10px;
   font-family: "PTSansBold";
   text-decoration: line-through;
   font-size: 17px;
@@ -611,6 +635,7 @@ img {
 }
 
 .manufacturers-list {
+  margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 20px;
@@ -622,13 +647,26 @@ img {
   height: 145px;
   border: 1px solid #eaeaea;
   display: flex;
+}
+
+.manufacturers-item a {
+  width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.manufacturers-item:focus,
+.manufacturers-item:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.manufacturers-item:active {
+  opacity: 0.3;
+}
+
 .services {
   width: 100%;
-  margin-bottom: 40px;
   padding-top: 64px;
   padding-bottom: 99px;
   background-color: var(--basic-background);
@@ -639,6 +677,7 @@ img {
 }
 
 .services-heading {
+  margin-bottom: 25px;
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
@@ -666,7 +705,7 @@ img {
 }
 
 .services-item-heading {
-  margin: 0;
+  margin-bottom: 30px;
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
@@ -722,12 +761,15 @@ img {
 }
 
 .company-description {
+  padding: 70px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
+.contacts-heading,
 .partners-heading {
+  margin-bottom: 24px;
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
@@ -742,22 +784,26 @@ img {
   color: var(--basic-black);
 }
 
+.partners-text:nth-child(2) {
+  margin-bottom: 1px;
+}
+
+.partners-list {
+  margin-bottom: 15px;
+}
+
 .partners-item {
   background: url(../img/symbols/list-marker.png) no-repeat 0 12px;
   padding-left: 37px;
 }
 
+.partners-item + .partners-item {
+  margin-top: 8px;
+}
+
 .partners-item a {
   font-size: 18px;
   color: var(--basic-black);
-}
-
-.contacts-heading {
-  font-size: 30px;
-  line-height: 30px;
-  font-weight: 400;
-  color: var(--basic-black);
-  text-transform: uppercase;
 }
 
 .contacts-text {
@@ -778,19 +824,199 @@ img {
 /*******************************************Main_blank*******************************************/
 
 .empty {
-  font-size: 30px;
-  font-weight: 30px;
+  padding-top: 30px;
   color: var(--basic-red);
+}
+
+.empty span {
+  font-size: 30px;
+  line-height: 35px;
+  text-decoration: underline;
+}
+
+.empty p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: var(--basic-black);
 }
 
 /*******************************************Main_catalog*******************************************/
 
+.catalog-content {
+  font-family: "PTSans";
+}
 
+.filter-wrap {
+  padding: 21px 0 59px 0;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 220px 1fr;
+  align-content: start;
+}
+
+.breadcrumbs {
+  grid-column: 1 / -1;
+  display: flex;
+}
+
+.breadcrumbs-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs-item + .breadcrumbs-item {
+  margin-left: 16px;
+}
+
+.breadcrumbs-item img {
+  margin-right: 18px;
+}
+
+.breadcrumbs-item:nth-child(1) img {
+  margin-right: 0;
+}
+
+.breadcrumbs-link {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.filter-main-heading {
+  margin: 0;
+  padding: 29px 0 30px 29px;
+  font-family: "Cuprum";
+  background-color: #f2f6f8;
+  color: #32425c;
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  grid-column: 1 / -1;
+}
+
+.filter-heading {
+  padding: 10px 0 10px 18px;
+  background-color: #F7F3EC;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.filter-results-heading {
+  display: none;
+}
+
+.sorting-wrap {
+  margin-bottom: 28px;
+  padding: 10px 14px 10px 18px;
+  background-color: #F7F3EC;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sorting-list {
+  display: flex;
+}
+
+.results-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.results-list .goods-item {
+  margin: 0 20px 18px 0;
+  box-sizing: border-box;
+}
+
+.results-list .goods-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.filter-cost-wrap,
+.filter-manufacturer-wrap,
+.filter-power-wrap {
+  border: none;
+}
+
+.filter-cost-wrap,
+.filter-manufacturer-wrap {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.filter-cost-heading,
+.filter-manufacturer-heading,
+.filter-power-heading {
+  font-family: "PTSansBold";
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.filter-button {
+  height: 38px;
+  background-color: var(--white);
+  border: 1px solid #E5E5E5;
+  font-family: "PTSans";
+  color: var(--basic-black);
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-number-page {
+  width: 38px;
+}
+
+.filter-button-next {
+  width: 140px;
+}
+
+.show {
+  width: 220px;
+}
+
+.number-page-list {
+  display: flex;
+}
+
+.number-page-item + .number-page-item {
+  margin-left: 10px;
+}
+
+.perfarator-description {
+  padding: 64px 0 68px 0;
+  background-color: var(--basic-background);
+}
+
+.perfarator-description-heading {
+  font-family: "Cuprum";
+  margin: 0 0 25px 0;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.perfarator-description-text {
+  margin: 0;
+  font-size: 13px;
+}
 
 /*******************************************Footer*******************************************/
 
 .main-footer {
-  margin-top: 70px;
   display: flex;
   flex-direction: column;
 }
@@ -822,6 +1048,7 @@ img {
 }
 
 .footer-top-text {
+  padding-top: 22px;
   color: var(--white);
   font-size: 18px;
 }
