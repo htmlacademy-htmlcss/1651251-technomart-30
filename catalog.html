@@ -69,7 +69,7 @@
           </div>
           <p class="header-phone-text">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
-        <ul class="user-link-list">
+        <ul class="user-link-list user-authorized">
           <li class="user-link-container">
             <a class="user-link authorized" href="blank.html">
               <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -83,6 +83,16 @@
                   d="M17 15h-5v2h5c2.2 0 3-1.8 3-3V3c0-1.2-.8-3-3-3h-5v2h5c.8 0 1 .7 1 1v11c0 .3-.2 1-1 1z" />
               </svg>
             </a>
+          </li>
+          <li class="user-menu-container">
+            <ul class="user-menu">
+              <li class="user-menu-item">
+                <a href="blank.html">Мои заказы</a>
+              </li>
+              <li class="user-menu-item">
+                <a href="blank.html">Личный кабинет</a>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -108,20 +118,16 @@
     <div class="filter-wrap container">
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link" href="index.html">
-            <img src="./img/symbols/home-mini.svg" width="14" height="12" alt="mini_home"></a>
+          <a class="breadcrumbs-link breadcrumbs-home" href="index.html"></a>
         </li>
         <li class="breadcrumbs-item">
-          <img src="./img/symbols/icon-right-small.svg" width="8" height="12" alt="right">
           <a class="breadcrumbs-link" href="catalog.html">Каталог</a>
         </li>
         <li class="breadcrumbs-item">
-          <img src="./img/symbols/icon-right-small.svg" width="8" height="12" alt="right">
           <a class="breadcrumbs-link" href="blank.html">Инструмент</a>
         </li>
-        <li class="breadcrumbs-item">
-          <img src="./img/symbols/icon-right-small.svg" width="8" height="12" alt="right">
-          <a class="breadcrumbs-link" href="blank.html">Перфораторы</a>
+        <li class="breadcrumbs-item breadcrumbs-current">
+          <a class="breadcrumbs-link">Перфораторы</a>
         </li>
       </ul>
       <h2 class="filter-main-heading">Перфораторы</h2>
@@ -137,24 +143,24 @@
           <fieldset class="filter-manufacturer-wrap">
             <legend class="filter-manufacturer-heading">Производители:</legend>
             <ul class="filter-manufacturer-list">
-              <li>
-                <input type="checkbox" name="bosch" id="ckeckbox-bosch" checked>
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="bosch" id="ckeckbox-bosch" checked>
                 <label for="ckeckbox-bosch">BOSCH</label>
               </li>
-              <li>
-                <input type="checkbox" name="interskol" id="ckeckbox-interskol">
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="interskol" id="ckeckbox-interskol">
                 <label for="ckeckbox-interskol">ИНТЕРСКОЛ</label>
               </li>
-              <li>
-                <input type="checkbox" name="makita" id="ckeckbox-makita" checked>
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="makita" id="ckeckbox-makita" checked>
                 <label for="ckeckbox-makita">MAKITA</label>
               </li>
-              <li>
-                <input type="checkbox" name="dewalt" id="ckeckbox-dewalt">
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="dewalt" id="ckeckbox-dewalt">
                 <label for="ckeckbox-dewalt">DEWALT</label>
               </li>
-              <li>
-                <input type="checkbox" name="hitachi" id="ckeckbox-hitachi">
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hitachi" id="ckeckbox-hitachi">
                 <label for="ckeckbox-hitachi">HITACHI</label>
               </li>
             </ul>
@@ -162,12 +168,12 @@
           <fieldset class="filter-power-wrap">
             <legend class="filter-power-heading">Питание:</legend>
             <ul>
-              <li>
-                <input type="radio" name="power" value="battery" id="radio-battery" checked>
+              <li class="filter-option filter-radio">
+                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="power" value="battery" id="radio-battery" checked>
                 <label for="radio-battery">Аккумуляторные</label>
               </li>
-              <li>
-                <input type="radio" name="power" value="net" id="radio-net">
+              <li class="filter-option filter-radio">
+                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="power" value="net" id="radio-net">
                 <label for="radio-net">Сетевые</label>
               </li>
             </ul>
@@ -176,31 +182,39 @@
         </form>
       </section>
       <section class="filter-results">
-        <h2 class="filter-results-heading">Список товаров</h2>
+        <h2 class="visually-hidden">Список товаров</h2>
         <div class="sorting-wrap">
           <p>Сортировка: </p>
-          <ul class="sorting-list">
-            <li>
-              <input type="radio" name="sort" value="cost" id="radio-cost" checked>
+          <ul class="sorting-list sorting-list-left">
+            <li class="sorting-option">
+              <input class="visually-hidden sorting-input-radio sorting-input" type="radio" name="sort" value="cost" id="radio-cost" checked>
               <label for="radio-cost">По цене</label>
             </li>
-            <li>
-              <input type="radio" name="sort" value="type" id="radio-type">
+            <li class="sorting-option">
+              <input class="visually-hidden sorting-input-radio sorting-input" type="radio" name="sort" value="type" id="radio-type">
               <label for="radio-type">По типу</label>
             </li>
-            <li>
-              <input type="radio" name="sort" value="functional" id="radio-functional">
+            <li class="sorting-option">
+              <input class="visually-hidden sorting-input-radio sorting-input" type="radio" name="sort" value="functional" id="radio-functional">
               <label for="radio-functional">По функционалу</label>
             </li>
           </ul>
-          <ul class="sorting-list">
-            <li>
-              <input type="radio" name="order" value="ascending" id="radio-ascending" checked>
-              <label for="radio-ascending"><img src="./img/symbols/icon-up-dir.svg" alt="up"></label>
+          <ul class="sorting-list sorting-list-right">
+            <li class="sorting-option-right">
+              <input class="visually-hidden sorting-radio-right" type="radio" name="order" value="ascending" id="radio-ascending" checked>
+              <label for="radio-ascending">
+                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 0L11 10L0 10" fill="var(--basic-red)"/>
+                </svg>
+              </label>
             </li>
-            <li>
-              <input type="radio" name="order" value="descending" id="radio-descending">
-              <label for="radio-descending"><img src="./img/symbols/icon-down-dir.svg" alt="down"></label>
+            <li class="sorting-option-right">
+              <input class="visually-hidden sorting-radio-right" type="radio" name="order" value="descending" id="radio-descending">
+              <label for="radio-descending">
+                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 10L0 0H11" fill="var(--basic-graylight)"/>
+                </svg>
+              </label>
             </li>
           </ul>
         </div>
@@ -409,17 +423,17 @@
                 </div>
               </li>
             </ul>
-            <ul class="number-page-list">
-              <li class="number-page-item">
-                <a class="filter-button filter-number-page">1</a>
+            <ul class="pagination">
+              <li class="pagination-item">
+                <a class="filter-button filter-pagination">1</a>
               </li>
-              <li class="number-page-item">
-                <a class="filter-button filter-number-page" href="#">2</a>
+              <li class="pagination-item">
+                <a class="filter-button filter-pagination" href="#">2</a>
               </li>
-              <li class="number-page-item">
-                <a class="filter-button filter-number-page" href="#">3</a>
+              <li class="pagination-item">
+                <a class="filter-button filter-pagination" href="#">3</a>
               </li>
-              <li class="number-page-item"><a class="filter-button filter-button-next" href="#">Следующая</a></li>
+              <li class="pagination-item"><a class="filter-button filter-button-next" href="#">Следующая</a></li>
             </ul>
           </div>
       </section>
@@ -443,7 +457,7 @@
     <section class="footer-top">
       <div class="footer-top-inner container">
         <div class="footer-top-left">
-          <h2 class="footer-top-heading">Меню футера</h2>
+          <h2 class="visually-hidden">Меню футера</h2>
           <div class="footer-logo logo">
             <a href="index.html" class="logo-link"><img class="logo-img" src="./img/symbols/logo.svg" width="107"
                 height="17" alt="site_logotype"></a>
@@ -471,7 +485,7 @@
     </section>
     <section class="footer-bottom">
       <div class="footer-bottom-inner container">
-        <h2 class="footer-bottom-heading">Контакты</h2>
+        <h2 class="visually-hidden">Контакты</h2>
         <p class="footer-bottom-text">
           <span>© 2010–2019 Компания «Техномарт»</span>
           <span>Все права защищены</span>

@@ -30,7 +30,7 @@
                   d="M13.5 12l3.5 3.6-1.4 1.4-3.6-3.5a7.5 7.5 0 01-12-6A7.5 7.5 0 1113.5 12zm-6-10a5.5 5.5 0 100 11 5.5 5.5 0 000-11z" />
               </svg>
             </label>
-            <input type="text" name="search" id="search-id" placeholder="Поиск">
+            <input type="text" name="search" id="search-id" placeholder="Поиск:">
           </form>
         </div>
         <div class="header-top-right">
@@ -109,7 +109,7 @@
 
   <main class="index-content">
     <section class="offers container">
-      <h2 class="offers-title">Предложения</h2>
+      <h2 class="visually-hidden">Предложения</h2>
       <div class="offers-list">
         <div class="offers-item">
           <a class="offers-link" href="blank.html">
@@ -295,13 +295,15 @@
       <div class="services-inner container">
         <div class="services-heading-container">
           <h2 class="services-heading">Сервисы</h2>
-          <p class="services-item-text">Хороший интернет-магазин отличается от плохого не только ценами! <br>
-            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+          <p class="services-item-text">
+            Хороший интернет-магазин отличается от плохого не только ценами! <br>
+            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+          </p>
         </div>
         <div class="services-list-container">
           <ul class="services-buttons-list">
-            <li class="services-button-item"><button class="services-button show-delivery" type="button"
-                onclick="deliveryShow()"><span>Доставка</span></button>
+            <li class="services-button-item"><a class="services-button show-delivery"
+                onclick="deliveryShow()"><span>Доставка</span></a>
             </li>
             <li class="services-button-item"><button class="services-button show-warranty" type="button"
                 onclick="warrantyShow()"><span>Гарантия</span></button>
@@ -314,7 +316,7 @@
             <li class="services-item delivery">
               <div class="services-item-container">
                 <h3 class="services-item-heading">Доставка</h3>
-                <p class="services-item-text">Мы с удовольствием доставим ваш товар прямо
+                <p class="services-item-description">Мы с удовольствием доставим ваш товар прямо
                   к вашему подъезду совершенно бесплатно!
                   Ведь мы неплохо заработаем,
                   поднимая его на ваш этаж!</p>
@@ -324,7 +326,8 @@
             <li class="services-item warranty">
               <div class="services-item-container">
                 <h3 class="services-item-heading">Гарантия</h3>
-                <p class="services-item-text">Если купленный у нас товар поломается или заискрит, а также в случае
+                <p class="services-item-description">Если купленный у нас товар поломается или заискрит, а также в
+                  случае
                   пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем
                   сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
               </div>
@@ -333,7 +336,8 @@
             <li class="services-item credit">
               <div class="services-item-container">
                 <h3 class="services-item-heading">Кредит</h3>
-                <p class="services-item-text credit-text">Залезть в долговую яму стало проще! Кредитные консультанты
+                <p class="services-item-description credit-text">Залезть в долговую яму стало проще! Кредитные
+                  консультанты
                   придут вам на
                   помощь.</p>
                 <button class="standart-link">Отправить заявку</button>
@@ -370,7 +374,13 @@
         <p class="contacts-text">Вы можете забрать товар сами,<br>
           заехав в наш офис:
         </p>
-        <!--Здесь будет карта-->
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1613491538654!5m2!1sru!2sru"
+            width="300" height="158" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0">
+          </iframe>
+        </div>
         <a class="standart-link" href="blank.html">Заблудились? Напишите нам!</a>
       </div>
     </section>
@@ -380,9 +390,9 @@
     <section class="footer-top">
       <div class="footer-top-inner container">
         <div class="footer-top-left">
-          <h2 class="footer-top-heading">Меню футера</h2>
+          <h2 class="visually-hidden">Меню футера</h2>
           <div class="footer-logo logo">
-            <a class="logo-link"><img class="logo-img" src="./img/symbols/logo.svg" width="107" height="17"
+            <a class="logo-link"><img class="logo-img" src="./img/symbols/logo.svg" width="136" height="22"
                 alt="site_logotype"></a>
           </div>
           <p class="footer-top-text">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
@@ -408,7 +418,7 @@
     </section>
     <section class="footer-bottom">
       <div class="footer-bottom-inner container">
-        <h2 class="footer-bottom-heading">Контакты</h2>
+        <h2 class="visually-hidden">Контакты</h2>
         <p class="footer-bottom-text">
           <span>© 2010–2019 Компания «Техномарт»</span>
           <span>Все права защищены</span>
