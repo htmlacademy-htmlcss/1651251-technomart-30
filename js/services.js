@@ -15,7 +15,7 @@ const deliveryShow = () => {
   warranty_btn.style.color = "var(--white)";
   credit_btn.style.backgroundColor = "#32425C";
   credit_btn.style.color = "var(--white)";
-}
+};
 
 const warrantyShow = () => {
   delivery.style.display = "none";
@@ -27,7 +27,7 @@ const warrantyShow = () => {
   delivery_btn.style.color = "var(--white)";
   credit_btn.style.backgroundColor = "#32425C";
   credit_btn.style.color = "var(--white)";
-}
+};
 
 const creditShow = () => {
   warranty.style.display = "none";
@@ -39,6 +39,6 @@ const creditShow = () => {
   warranty_btn.style.color = "var(--white)";
   delivery_btn.style.backgroundColor = "#32425C";
   delivery_btn.style.color = "var(--white)";
-}
+};
 
 deliveryShow();
