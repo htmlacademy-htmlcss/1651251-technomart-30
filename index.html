@@ -17,40 +17,35 @@
   <header class="main-header">
     <section class="header-top">
       <div class="header-top-inner container">
-        <div class="header-top-left">
-          <div class="logo">
-            <a class="logo-link">
-              <img class="logo-img" src="./img/symbols/logo.svg" width="107" height="17"
-                alt="Логотип сайта Техномарт" />
-            </a>
-          </div>
-          <form class="search">
-            <label for="search-id">
-              <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="search-icon-fill" fill-rule="evenodd" clip-rule="evenodd"
-                  d="M13.5 12l3.5 3.6-1.4 1.4-3.6-3.5a7.5 7.5 0 01-12-6A7.5 7.5 0 1113.5 12zm-6-10a5.5 5.5 0 100 11 5.5 5.5 0 000-11z" />
-              </svg>
-            </label>
-            <input type="text" name="search" id="search-id" placeholder="Поиск:" />
-          </form>
-        </div>
-        <div class="header-top-right">
-          <a class="header-link" href="blank.html">
-            <svg width="14" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="bookmark-fill"
-                d="M14 15c0 .6-.4.7-.8.4l-5.4-3.7c-.4-.4-1.2-.4-1.6 0L.8 15.4c-.4.3-.8.2-.8-.4V1c0-.6.5-1 1-1h12c.6 0 1 .5 1 1v14z" />
-            </svg>
-            <span>Закладки: 0</span>
+        <div class="logo">
+          <a class="logo-link">
+            <img class="logo-img" src="./img/symbols/logo.svg" width="107" height="17" alt="Логотип сайта Техномарт" />
           </a>
-          <a class="header-link" href="blank.html">
-            <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="mini-basket-fill"
-                d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z" />
-            </svg>
-            <span>Корзина: 0</span>
-          </a>
-          <a class="header-link" href="blank.html">Оформить заказ</a>
         </div>
+        <form class="search">
+          <input type="text" class="search-input" name="search" id="search-id" placeholder="Поиск:" />
+          <label for="search-id" class="search-label">
+            <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="search-icon-fill" fill-rule="evenodd" clip-rule="evenodd"
+                d="M13.5 12l3.5 3.6-1.4 1.4-3.6-3.5a7.5 7.5 0 01-12-6A7.5 7.5 0 1113.5 12zm-6-10a5.5 5.5 0 100 11 5.5 5.5 0 000-11z" />
+            </svg>
+          </label>
+        </form>
+        <a class="header-link" href="blank.html">
+          <svg width="14" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="bookmark-fill"
+              d="M14 15c0 .6-.4.7-.8.4l-5.4-3.7c-.4-.4-1.2-.4-1.6 0L.8 15.4c-.4.3-.8.2-.8-.4V1c0-.6.5-1 1-1h12c.6 0 1 .5 1 1v14z" />
+          </svg>
+          <span>Закладки: 0</span>
+        </a>
+        <a class="header-link" href="blank.html">
+          <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="mini-basket-fill"
+              d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z" />
+          </svg>
+          <span>Корзина: 0</span>
+        </a>
+        <a class="header-link" href="blank.html">Оформить заказ</a>
       </div>
     </section>
     <section class="header-middle">
@@ -155,18 +150,24 @@
             </div>
           </div>
           <a class="standart-link slider-link" href="catalog.html">Открыть каталог</a>
-          <span class="button-left" onclick="prevSlide()">
-            <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="button-left-fill"
-                d="M19.9244 0.941406L21.9226 2.98921L4.90699 20.436L21.978 37.9375L19.9789 39.9853L0.910645 20.436L19.9244 0.941406Z" />
-            </svg>
-          </span>
-          <span class="button-right" onclick="nextSlide()">
-            <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="button-right-fill"
-                d="M2.07562 39.0586L0.0774441 37.0108L17.093 19.564L0.021965 2.06249L2.0211 0.0146904L21.0894 19.564L2.07562 39.0586Z" />
-            </svg>
-          </span>
+          <div class="slider-controls">
+            <button class="button-left" aria-label="Предыдущий слайд">
+              <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="button-left-fill"
+                  d="M19.9244 0.941406L21.9226 2.98921L4.90699 20.436L21.978 37.9375L19.9789 39.9853L0.910645 20.436L19.9244 0.941406Z" />
+              </svg>
+            </button>
+            <button class="button-right" aria-label="Следующий слайд">
+              <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="button-right-fill"
+                  d="M2.07562 39.0586L0.0774441 37.0108L17.093 19.564L0.021965 2.06249L2.0211 0.0146904L21.0894 19.564L2.07562 39.0586Z" />
+              </svg>
+            </button>
+          </div>
+          <div class="slider-navigation">
+            <button class="slider-navigation-item" onclick="showSlide(0)"></button>
+            <button class="slider-navigation-item" onclick="showSlide(1)"></button>
+          </div>
         </div>
         <div class="offers-item">
           <a class="offers-link" href="blank.html">
@@ -195,7 +196,7 @@
             <img src="./img/products/snippet-32961_copy_3.jpg" width="184" height="164"
               alt="Перфоратор BOSCH BFG 9000" />
             <div class="goods-item-menu">
-              <a onclick="openBasket()">
+              <a class="basket-modal-btn" onclick="openBasket()">
                 <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"
@@ -218,7 +219,7 @@
             <img src="./img/products/snippet-18927_copy_3.jpg" width="127" height="112"
               alt="Перфоратор BOSCH BFG 3000" />
             <div class="goods-item-menu">
-              <a onclick="openBasket()">
+              <a class="basket-modal-btn" onclick="openBasket()">
                 <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"
@@ -239,7 +240,7 @@
           <div class="goods-item-top">
             <img src="./img/products/snippet-945_copy_2.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000" />
             <div class="goods-item-menu">
-              <a onclick="openBasket()">
+              <a class="basket-modal-btn" onclick="openBasket()">
                 <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"
@@ -262,7 +263,7 @@
             <img src="./img/products/snippet-18927_copy_3.jpg" width="127" height="112"
               alt="Перфоратор BOSCH BFG 2000" />
             <div class="goods-item-menu">
-              <a onclick="openBasket()">
+              <a class="basket-modal-btn" onclick="openBasket()">
                 <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"
@@ -326,21 +327,23 @@
         <div class="services-list-container">
           <ul class="services-buttons-list">
             <li class="services-button-item">
-              <a class="services-button show-delivery" onclick="deliveryShow()"><span>Доставка</span></a>
+              <button class="services-button show-delivery active-service">
+                <span>Доставка</span>
+              </button>
             </li>
             <li class="services-button-item">
-              <button class="services-button show-warranty" type="button" onclick="warrantyShow()">
+              <button class="services-button show-warranty" type="button">
                 <span>Гарантия</span>
               </button>
             </li>
             <li class="services-button-item">
-              <button class="services-button show-credit" type="button" onclick="creditShow()">
+              <button class="services-button show-credit" type="button">
                 <span>Кредит</span>
               </button>
             </li>
           </ul>
           <ul class="services-list">
-            <li class="services-item delivery">
+            <li class="services-item delivery service-open">
               <div class="services-item-container">
                 <h3 class="services-item-heading">Доставка</h3>
                 <p class="services-item-description">
@@ -409,11 +412,11 @@
           заехав в наш офис:
         </p>
         <div class="map-wrap">
-          <a onclick="openMap()">
+          <a href="#" class="map-modal-btn">
             <img src="./img/mini-map.png" alt="Мини карта" />
           </a>
         </div>
-        <a class="standart-link" onclick="openContact()">
+        <a href="#" class="standart-link contact-modal-btn">
           Заблудились? Напишите нам!
         </a>
       </div>
@@ -510,11 +513,13 @@
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться?</h2>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1613491538654!5m2!1sru!2sru"
-      width="943" height="442" frameborder="0" style="border: 0" allowfullscreen="" aria-hidden="false" tabindex="0">
-    </iframe>
-    <button class="modal-close" type="button" onclick="closeModalindex()" aria-label="Закрыть"></button>
+    <div class="modal-map-inner">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1613491538654!5m2!1sru!2sru"
+        width="943" height="442" frameborder="0" style="border: 0" allowfullscreen="" aria-hidden="false" tabindex="0">
+      </iframe>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    </div>
   </section>
 
   <section class="modal modal-contact">
@@ -543,8 +548,8 @@
           </button>
         </div>
       </form>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </div>
-    <button class="modal-close" type="button" onclick="closeModalindex()" aria-label="Закрыть"></button>
   </section>
 
   <section class="modal modal-basket">
@@ -563,15 +568,15 @@
       </div>
       <div class="basket-menu">
         <a href="blank.html" class="standart-link basket-link">Оформить заказ</a>
-        <a onclick="closeModalcatalog()" class="standart-link basket-link">Продолжить покупки</a>
+        <a class="standart-link basket-link" onclick="closeBasket()">Продолжить покупки</a>
       </div>
-      <button class="modal-close" type="button" onclick="closeModalcatalog()" aria-label="Закрыть"></button>
+      <button class="modal-close" type="button" onclick="closeBasket()" aria-label="Закрыть"></button>
     </div>
   </section>
 
-  <script src="./js/modal.min.js"></script>
-  <script src="./js/services.min.js"></script>
-  <script src="./js/slider.min.js"></script>
+  <script defer src="./js/modal_index.min.js"></script>
+  <script defer src="./js/services.min.js"></script>
+  <script defer src="./js/slider.min.js"></script>
 
 </body>
 
