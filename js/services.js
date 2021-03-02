@@ -1,44 +1,55 @@
 const delivery = document.querySelector(".delivery");
 const warranty = document.querySelector(".warranty");
 const credit = document.querySelector(".credit");
-const delivery_btn = document.querySelector(".show-delivery");
-const warranty_btn = document.querySelector(".show-warranty");
-const credit_btn = document.querySelector(".show-credit");
+let currentService = "delivery";
 
-const deliveryShow = () => {
-  warranty.style.display = "none";
-  credit.style.display = "none";
-  delivery.style.display = "flex";
-  delivery_btn.style.backgroundColor = "var(--white)";
-  delivery_btn.style.color = "#32425C";
-  warranty_btn.style.backgroundColor = "#32425C";
-  warranty_btn.style.color = "var(--white)";
-  credit_btn.style.backgroundColor = "#32425C";
-  credit_btn.style.color = "var(--white)";
-};
+const btnServiceOpenDelivery = document.querySelector(".show-delivery");
 
-const warrantyShow = () => {
-  delivery.style.display = "none";
-  credit.style.display = "none";
-  warranty.style.display = "flex";
-  warranty_btn.style.backgroundColor = "var(--white)";
-  warranty_btn.style.color = "#32425C";
-  delivery_btn.style.backgroundColor = "#32425C";
-  delivery_btn.style.color = "var(--white)";
-  credit_btn.style.backgroundColor = "#32425C";
-  credit_btn.style.color = "var(--white)";
-};
+btnServiceOpenDelivery.addEventListener("click", (evt) => {
+  btnServiceOpenDelivery.classList.add("active-service");
+  if (currentService === "warranty") {
+    btnServiceOpenWarranty.classList.remove("active-service");
+    warranty.classList.remove("service-open");
+  };
+  if (currentService === "credit") {
+    btnServiceOpenCredit.classList.remove("active-service");
+    credit.classList.remove("service-open");
+  };
+  delivery.classList.add("service-open");
+  currentService = "delivery";
+  console.log(currentService);
+})
 
-const creditShow = () => {
-  warranty.style.display = "none";
-  delivery.style.display = "none";
-  credit.style.display = "flex";
-  credit_btn.style.backgroundColor = "var(--white)";
-  credit_btn.style.color = "#32425C";
-  warranty_btn.style.backgroundColor = "#32425C";
-  warranty_btn.style.color = "var(--white)";
-  delivery_btn.style.backgroundColor = "#32425C";
-  delivery_btn.style.color = "var(--white)";
-};
+const btnServiceOpenWarranty = document.querySelector(".show-warranty");
 
-deliveryShow();
+btnServiceOpenWarranty.addEventListener("click", (evt) => {
+  btnServiceOpenWarranty.classList.add("active-service");
+  if (currentService === "delivery") {
+    btnServiceOpenDelivery.classList.remove("active-service");
+    delivery.classList.remove("service-open");
+  };
+  if (currentService === "credit") {
+    btnServiceOpenCredit.classList.remove("active-service");
+    credit.classList.remove("service-open");
+  };
+  warranty.classList.add("service-open");
+  currentService = "warranty";
+  console.log(currentService);
+})
+
+const btnServiceOpenCredit = document.querySelector(".show-credit");
+
+btnServiceOpenCredit.addEventListener("click", (evt) => {
+  btnServiceOpenCredit.classList.add("active-service");
+  if (currentService === "warranty") {
+    btnServiceOpenWarranty.classList.remove("active-service");
+    warranty.classList.remove("service-open");
+  };
+  if (currentService === "delivery") {
+    btnServiceOpenDelivery.classList.remove("active-service");
+    delivery.classList.remove("service-open");
+  };
+  credit.classList.add("service-open");
+  currentService = "credit";
+  console.log(currentService);
+})

@@ -1,29 +1,49 @@
 const perfarator = document.querySelector(".perfarators-bg");
 const drill = document.querySelector(".drills-bg");
-const next_btn = document.querySelector(".button-right-fill");
-const prev_btn = document.querySelector(".button-left-fill");
+const nextBtn = document.querySelector(".button-right-fill");
+const prevBtn = document.querySelector(".button-left-fill");
+const sliderItems = document.querySelectorAll(".slider-item");
+const sliderNavItems = document.querySelectorAll(".slider-navigation-item");
+const sliderRight = document.querySelector(".button-right");
+const sliderLeft = document.querySelector(".button-left");
 
-const prevSlide = () => {
-  prev_btn.style.fill = "#4d4d4d";
-  next_btn.style.fill = "var(--white)";
-  drill.style.display = "none";
-  perfarator.style.display = "block";
-}
+let i = 0;
 
-const nextSlide = () => {
-  next_btn.style.fill = "#4d4d4d";
-  prev_btn.style.fill = "var(--white)";
-  perfarator.style.display = "none";
-  drill.style.display = "block";
-}
+const showSlide = (currentSlide) => {
 
-const tickSlide = () => {
-  nextSlide();
-  setTimeout(() => {
-    prevSlide();
-  }, 5000);
-}
+  sliderNavItems.forEach((dot, index) => {
+    if ((index === currentSlide)) {
+      dot.classList.add("active-slide");
+      return;
+    }
 
-setInterval(() => {
-  tickSlide();
-}, 10000);
+    dot.classList.remove("active-slide");
+  });
+
+  sliderItems.forEach((slide, index) => {
+    if (index === currentSlide) {
+    slide.style.display = "block";
+    return;
+    }
+    slide.style.display = "none";
+  });
+
+};
+
+sliderRight.addEventListener("click", (evt) => {
+  i++;
+  if (i === sliderNavItems.length) {
+    i = 0;
+  }
+  showSlide(i);
+});
+
+sliderLeft.addEventListener("click", (evt) => {
+  if (i === 0) {
+    i = sliderNavItems.length;
+  }
+  i--;
+  showSlide(i);
+});
+
+showSlide(0);
