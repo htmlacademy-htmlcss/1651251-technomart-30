@@ -19,6 +19,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /*******************************************Fonts*******************************************/
 
 @font-face {
@@ -503,7 +510,6 @@ input[type="radio"].visually-hidden {
 }
 
 .header-middle-inner {
-  padding-left: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -589,11 +595,12 @@ input[type="radio"].visually-hidden {
 }
 
 .main-title {
-  margin: 0;
+  margin: 0 20px 0 30px;
   color: var(--basic-red);
   font-family: CuprumItalic, Arial, Helvetica, sans-serif;
   font-size: 16px;
-  line-height: 23px;
+  line-height: 24px;
+  font-weight: 500;
 }
 
 .header-link {
@@ -606,6 +613,15 @@ input[type="radio"].visually-hidden {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.bookmark-link {
+  margin-right: 20px;
+}
+
+.header-link-basket {
+  margin-left: 12px;
+  margin-right: 10px;
 }
 
 .link-basket {
@@ -648,6 +664,10 @@ input[type="radio"].visually-hidden {
   flex-direction: column;
 }
 
+.catalog-phone-number {
+  margin-left: 25px;
+}
+
 .header-phone-number-container {
   width: 270px;
   height: 45px;
@@ -679,6 +699,11 @@ input[type="radio"].visually-hidden {
 
 .authorized span {
   margin: 0 21px;
+}
+
+.enter .user-link {
+  padding-left: 20px;
+  padding-right: 28px;
 }
 
 .user-link {
@@ -937,7 +962,7 @@ input[type="radio"].visually-hidden {
 }
 
 .offers-link {
-  padding: 0 43px 0 22px;
+  padding: 0 35px 0 22px;
   width: 100%;
   color: var(--white);
   font-size: 24px;
@@ -960,12 +985,22 @@ input[type="radio"].visually-hidden {
 }
 
 .offers-item-left span {
+  width: 135px;
+  height: 38px;
   margin-top: 14px;
-  padding: 10px 24px;
   background-color: rgba(255, 255, 255, 0.3);
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .offers-item-left span:focus,
@@ -985,12 +1020,14 @@ input[type="radio"].visually-hidden {
   width: 620px;
   height: 266px;
   background-image: url(../img/slider/perfarators.jpg);
+  background-color: var(--basic-graylight);
 }
 
 .drills-bg {
   width: 620px;
   height: 266px;
   background-image: url(../img/slider/drills.jpg);
+  background-color: var(--basic-graylight);
 }
 
 .slider-text-wrap {
@@ -1015,7 +1052,7 @@ input[type="radio"].visually-hidden {
 .slider-link {
   width: 192px;
   position: absolute;
-  bottom: 38px;
+  bottom: 47px;
   left: 24px;
 }
 
@@ -1043,8 +1080,8 @@ input[type="radio"].visually-hidden {
 
 .slider-navigation {
   position: absolute;
-  bottom: 40px;
-  left: 50%;
+  bottom: 50px;
+  left: 47%;
 }
 
 .slider-navigation-item {
@@ -1056,6 +1093,10 @@ input[type="radio"].visually-hidden {
   border: 2px solid var(--white);
   border-radius: 50%;
   background-color: var(--white);
+}
+
+.slider-navigation-item + .slider-navigation-item {
+  margin-left: 6px;
 }
 
 .active-slide {
@@ -1090,7 +1131,7 @@ input[type="radio"].visually-hidden {
 }
 
 .popular-goods {
-  padding: 20px 0 35px 0;
+  padding: 20px 0 30px 0;
 }
 
 .popular-goods-heading-container,
@@ -1133,13 +1174,14 @@ input[type="radio"].visually-hidden {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+}
+
+.goods-wrap .goods-item {
+  margin: 0 20px 18px 0;
+}
+
+.goods-wrap .goods-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .goods-item {
@@ -1315,7 +1357,7 @@ input[type="radio"].visually-hidden {
 }
 
 .manufacturers {
-  padding-top: 35px;
+  padding-top: 25px;
   padding-bottom: 70px;
 }
 
@@ -1460,7 +1502,18 @@ input[type="radio"].visually-hidden {
 }
 
 .services-buttons-list {
+  position: relative;
   margin-right: 80px;
+}
+
+.services-buttons-list::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: -44px;
+  width: 10px;
+  height: 279px;
+  background: url(../img/shadow.png);
 }
 
 .services-button {
@@ -1731,7 +1784,7 @@ input[type="radio"].visually-hidden {
 }
 
 .sorting-list-left li + li {
-  margin-left: 75px;
+  margin-left: 70px;
 }
 
 .sorting-list-right li + li {
@@ -1742,19 +1795,23 @@ input[type="radio"].visually-hidden {
   color: var(--basic-black);
   opacity: 0.4;
   cursor: pointer;
-  border-bottom: 2px dotted var(--basic-red);
+  border-bottom: 1px dotted var(--basic-red);
 }
 
 .sorting-list-left label:hover,
 .sorting-list-left label:focus {
   opacity: 1;
-  border-bottom: 2px solid var(--basic-red);
+  border-bottom: 1px solid var(--basic-red);
 }
 
 .sorting-input-radio:checked + label {
   color: var(--basic-red);
   opacity: 1;
   border-bottom: none;
+}
+
+.sorting-list-left {
+  margin-left: 99px;
 }
 
 .sorting-radio-right + label path {
@@ -1816,6 +1873,17 @@ input[type="radio"].visually-hidden {
   width: 23px;
   height: 23px;
   background-image: url(../img/symbols/checkbox_unchecked.svg);
+}
+
+.filter-input-checkbox:focus + label,
+.filter-input-checkbox:checked:focus + label,
+.filter-input-radio:focus + label,
+.filter-input-radio:checked:focus + label,
+.sorting-input-radio:focus + label,
+.sorting-input-radio:checked:focus + label,
+.sorting-radio-right:focus + label,
+.sorting-radio-right:checked:focus + label {
+  border: 1px solid var(--basic-gray);
 }
 
 .filter-input-checkbox:checked + label::before {
@@ -2199,7 +2267,7 @@ input[type="radio"].visually-hidden {
 }
 
 .socials {
-  margin: 0;
+  margin: 0 0 0 33px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2248,7 +2316,7 @@ input[type="radio"].visually-hidden {
 }
 
 .feedback {
-  margin: 0;
+  margin: 0 15px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
